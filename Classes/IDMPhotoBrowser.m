@@ -167,7 +167,7 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
         _autoHideInterface = YES;
 
         _displayDoneButton = YES;
-        _doneButtonImage = nil;
+        _doneButtonImage = [UIImage imageNamed:@"ic_close"];
 
         _displayToolbar = YES;
         _displayActionButton = YES;
@@ -1153,7 +1153,7 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
 
     CGRect rtn = CGRectMake(screenWidth - self.doneButtonRightInset - self.doneButtonSize.width, self.doneButtonTopInset, self.doneButtonSize.width, self.doneButtonSize.height);
     rtn = [self adjustForSafeArea:rtn adjustForStatusBar:true];
-    return rtn;
+    return CGRectMake(0, 44, 55, 55);
 }
 
 - (CGRect)frameForCaptionView:(IDMCaptionView *)captionView atIndex:(NSUInteger)index {
